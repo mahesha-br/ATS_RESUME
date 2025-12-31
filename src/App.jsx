@@ -3,6 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import SideBar from './component/sideBar/SideBar'
+import { Routes,Route } from 'react-router-dom'
+import Dashboard from './component/Dashboard/Dashboard'
+import History from './component/History/History'
+import Admin from './component/Admin/Admin'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,6 +14,12 @@ function App() {
   return (
     <div className='App'>
     <SideBar/>
+    <Routes>
+      <Route path='/dashboard' element={<Dashboard/>}/>
+      <Route path='/history' element={<History/>}/>
+      <Route path='/admin' element={<Admin/>}/>
+
+    </Routes>
     </div>
   )
 }

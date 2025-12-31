@@ -4,8 +4,13 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { Link, useLocation } from "react-router-dom";
 
 const SideBar = () => {
+    const location=useLocation();
+    console.log(location);
+     
+
   return (
     <div className="flex-[0.2] bg-[#0b0b5a] text-white h-screen shrink-0">
       
@@ -18,20 +23,20 @@ const SideBar = () => {
       {/* Menu */}
       <div className="mt-[30px]">
 
-        <div className="p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10">
+        <Link to={'/dashboard'} className="p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10">
           <DashboardIcon sx={{ fontSize: 25,}} />
           <span>Dashboard</span>
-        </div>
+        </Link>
 
-        <div className="p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10">
+        <Link to={'/history'} className="p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10">
           <ManageSearchIcon sx={{ fontSize: 30,}} />
           <span>History</span>
-        </div>
+        </Link>
 
-        <div className="p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10">
+        <Link to={'/admin'} className="p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10">
           <AdminPanelSettingsIcon sx={{ fontSize: 25,}} />
           <span>Admin</span>
-        </div>
+        </Link>
 
         <div className="p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10">
           <LogoutIcon sx={{ fontSize: 25,}} />
