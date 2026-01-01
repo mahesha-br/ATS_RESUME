@@ -17,7 +17,7 @@ const SideBar = () => {
       {/* Logo / Title */}
       <div className="px-7.5 py-5 flex flex-col items-center justify-center">
         <ArticleIcon sx={{ fontSize: 54, marginBottom: 2 }} />
-        <div className="text-[25px]  font-serif">Resume Screening</div>
+<div className="text-[25px] font-serif whitespace-nowrap">Resume Screening</div>
       </div>
 
       {/* Menu */}
