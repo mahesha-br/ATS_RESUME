@@ -23,17 +23,23 @@ const SideBar = () => {
       {/* Menu */}
       <div className="mt-[30px]">
 
-        <Link to={'/dashboard'} className="p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10">
-          <DashboardIcon sx={{ fontSize: 25,}} />
+        <Link to={'/dashboard'} 
+        className={`p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10
+  ${location.pathname === "/dashboard" ? "bg-[rgb(72,72,222)]" : ""}
+       `}><DashboardIcon sx={{ fontSize: 25,}}/>
           <span>Dashboard</span>
         </Link>
 
-        <Link to={'/history'} className="p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10">
+        <Link to={'/history'} className={`p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10
+  ${location.pathname === "/history" ? "bg-[rgb(72,72,222)]" : ""}
+       `}>
           <ManageSearchIcon sx={{ fontSize: 30,}} />
           <span>History</span>
         </Link>
 
-        <Link to={'/admin'} className="p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10">
+        <Link to={'/admin'} className={`p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10
+  ${location.pathname === "/admin" ? "bg-[rgb(72,72,222)]" : ""}
+       `}>
           <AdminPanelSettingsIcon sx={{ fontSize: 25,}} />
           <span>Admin</span>
         </Link>
