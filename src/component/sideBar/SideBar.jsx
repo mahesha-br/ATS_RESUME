@@ -15,13 +15,13 @@ const SideBar = () => {
     <div className="flex-[0.2] bg-[#0b0b5a] text-white h-screen shrink-0">
       
       {/* Logo / Title */}
-      <div className="px-[30px] py-[20px] flex flex-col items-center justify-center">
+      <div className="px-7.5 py-5 flex flex-col items-center justify-center">
         <ArticleIcon sx={{ fontSize: 54, marginBottom: 2 }} />
         <div className="text-[25px]  font-serif">Resume Screening</div>
       </div>
 
       {/* Menu */}
-      <div className="mt-[30px]">
+      <div className="mt-7.5">
 
         <Link to={'/dashboard'} 
         className={`p-5 flex font-serif items-center gap-2.5 text-[22px] cursor-pointer hover:bg-white/10
