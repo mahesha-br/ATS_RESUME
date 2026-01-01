@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Dashboard = () => {
   return (
     <div className="flex-[0.8] h-screen overflow-auto p-[50px] flex justify-between bg-[whitesmoke] box-border">
